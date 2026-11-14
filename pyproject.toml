@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pi-control-lab"
+version = "0.1.0"
+description = "PI control analysis and gain sensitivity for a damped plant"
+requires-python = ">=3.14"
+dependencies = ["numpy==2.4.4", "scipy==1.17.1", "matplotlib==3.10.9"]
+
+[project.scripts]
+pi-control = "pi_control.__main__:main"
+pi-compare = "pi_control.compare:main"
+
+[tool.setuptools]
+packages = ["pi_control"]
